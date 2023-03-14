@@ -1,0 +1,17 @@
+# Calculator
+We are used to mathematical expressions such as “( (4 + 5) - (1 * 2) ) / 5”, also known as infix notation, where operators are used in-between operands. However, for a calculator it is easier to process a postfix notation such as “4 5 + 1 2 * - 5 /”, where the operator is written after the operands.
+A stack is a data structure that follows the Last in First Out (LIFO) principle. There are two main implementations of stacks: array-based and singly linked list-based.
+An array-based stack uses an array to store the elements in the stack. The top of the stack is the last element in the array, and new elements are added to the end of the array.
+A singly linked list-based stack uses a singly linked list to store the elements in the stack. Each node in the list contains a reference to the next node, and the last node added to the list is considered the top of the stack.
+
+Some common use cases for stacks include:
+
+•	Undo/Redo functionality in text editors and image editors
+•	Keeping track of function calls in a program's call stack
+•	Evaluating mathematical expressions using postfix notation
+•	Balancing symbols in a code or mathematical expressions
+•	Implementing back functionality in web browsers
+•	Navigation in a deep-first search algorithm.
+Class Calculator
+                            This class is a simple calculator that uses a stack to evaluate an arithmetic expression passed as a string. The code uses the Java class StringTokenizer to separate the input string into tokens (numbers and operators), and the Stack class from the java.util package to store the operands. The code uses a while loop to iterate through the tokens and checks if the current token is numeric or an operator. If it is numeric, it pushes it onto the stack, otherwise, it performs the appropriate operation based on the operator (i.e., +, -, *, or /) by popping the two last operands from the stack, performing the operation and pushing the result back onto the stack. The final result is the last element in the stack which is the result of the expression.
+hasMoreElements(): This method is used to check if there are more elements in the tokenizer. It returns true if there are more elements and false if there are no more elements. The while loop in the main method uses this method to continue processing tokens until there are no more tokens.nextToken(): This method returns the next token from the tokenizer. It is used inside the while loop in the main method to get the current token being processed. push(E item): This method is used to push an item onto the top of the stack. The item passed as the argument is added to the top of the stack. It is used inside the while loop in the main method to push the operands onto the stack. Pop (): This method is used to remove and return the item at the top of the stack. It returns the item at the top of the stack and removes it from the stack. It is used inside the switch statement in the main method to pop the operands off the stack before performing the arithmetic operation.parseInt(String s) : This method returns a integer value after parsing the string passed as parameter. It is used to convert the string representation of the operands to integer before performing the arithmetic operation.String.valueOf(int i) : This method returns a string representation of the int passed as parameter. It is used to convert the result of the arithmetic operation to string before pushing it onto the stack.
